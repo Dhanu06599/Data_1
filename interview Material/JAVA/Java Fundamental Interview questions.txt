@@ -1,0 +1,444 @@
+---------------------------- Fundamentals -------------------------------
+
+
+Q)What is a class?Explain steps for writing a class?
+
+Classes are fundamental or basic unit in Object Oriented Programming .A class is kind of blueprint or 
+template for objects. Class defines variables, methods. A class tells what type of objects we are creating. 
+For example take Department class tells us we can create department type objects. We can create any 
+number of department objects.
+All programming constructs in java reside in class. When JVM starts running it first looks for the class 
+when we compile. Every Java application must have atleast one class and one main method.
+Class starts with class keyword. A class definition must be saved in class file that has same as class name. 
+File name must end with .java extension.
+public class FirstClass 
+{public static void main(String[] args) 
+{System.out.println(“My First class”);
+}
+}
+If we see the above class when we compile JVM loads the FirstClass and generates a .class 
+file(FirstClass.class). When we run the program we are running the class and then executes the main 
+method.
+
+
+
+
+Q)What is a constructor,its use & types
+
+A constructor is a special method used to initialize objects in java.
+we use constructors to initialize all variables in the class when an object is created. As and when an object 
+is created it is initialized automatically with the help of constructor in java.
+We have two types of constructors
+Default Constructor
+Parameterized Constructor
+Signature : public classname()
+{
+}
+Signature : public classname(parameters list)
+{
+}
+
+
+
+
+Q)what is constructor chaining?How do you implement it?
+
+Constructor chaining is the process of calling one constructor from another constructor with respect to current object. 
+Constructor chaining can be done in two ways: 
+ 
+
+Within same class: It can be done using this() keyword for constructors in same class
+From base class: by using super() keyword to call constructor from the base class.
+
+
+
+
+
+
+Q)Does constructor return any value?
+No, constructor does not return any value. 
+While declaring a constructor you will not have anything like return type. 
+In general, Constructor is implicitly called at the time of instantiation. 
+And it is not a method, its sole purpose is to initialize the instance variables.
+
+
+
+
+Q)Can constructor be inherited
+Constructors are not members, so they are not inherited by subclasses,
+ but the constructor of the superclass can be invoked from the subclass.
+ 
+ 
+ 
+Q)can we make constructor static/abstract/final
+No.
+Except public, protected and, private constructor does not allow any other modifier.
+
+
+Q)can we make constructor private
+Yes, we can declare a constructor as private. 
+If we declare a constructor as private we are not able to create an object of a class. 
+We can use this private constructor in the Singleton Design Pattern.
+
+
+
+Q)what is singleton class?how do we implement it
+In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time.
+ After the first time, if we try to instantiate the Singleton class, the new variable also points to the first instance created. 
+ So whatever modifications we do to any variable inside the class through any instance, affects the variable of the single instance created and
+ is visible if we access that variable through any variable of that class type defined. 
+
+
+
+Q)what is difference between local variable,static variable,instance variable
+https://www.geeksforgeeks.org/difference-between-instance-variable-and-local-variable/
+
+
+Q)what is static block?when is it invoked?
+A static block is a block of code with a static keyword. 
+In general, these are used to initialize the static members. 
+JVM executes static blocks before the main method at the time of class loading
+
+
+Q)can we write multiple static blocks ?
+
+Yes. It is possible to define multiple static blocks in a java class
+
+
+
+Q)what is static method & its use
+Static methods can be accessed without having to create a new object.
+ A static method can only use and call other static methods or static data members. 
+ It is usually used to operate on input arguments (which can always accept), 
+ perform calculation and return value.
+ 
+ 
+ 
+Q)why main method is static
+Java main() method is always static, so that compiler can call it without the creation of an object or before 
+the creation of an object of the class. In any Java program, 
+the main() method is the starting point from where compiler starts program execution.
+
+
+
+
+Q)In a java file,how many java classes can we write
+we can have multiple classes in same java file.
+ But, there is one restriction over here, 
+ which is that you can have as many classes in one file 
+ but only one public class is allowed.
+
+
+
+Q)can we call main explicitly
+no. because main() is a static method. 
+we can't call a method without creating an object.
+
+
+
+Q)Can we declare main() method as private or protected or with no access modifier?
+Yes, we can declare the main method as private in Java.
+
+
+
+Q)Can we run java class without main() method?
+Yes, we can execute a java program without a main method by using a static block.
+
+
+
+Q)what are command line arguments?How do we pass them in java?
+The java command-line argument is an argument i.e. passed at the time of running the java program.
+The arguments passed from the console can be received in the java program and it can be used as an input.
+https://www.javatpoint.com/command-line-argument
+
+
+
+
+Q)How do we create object in java?what is an object reference?
+A reference is an address that indicates where an object's variables 
+and methods are stored.
+
+Java provides five ways to create an object.
+
+Using new Keyword
+Using clone() method
+Using newInstance() method of the Class class
+Using newInstance() method of the Constructor class
+Using Deserialization
+
+Q)Can you create an object without using new operator in Java?
+You can create an object without new through:
+ Reflection/newInstance, clone() and (de)serialization
+ 
+ 
+ 
+Q)what is 'this' reference?Explain its use?
+‘this’ is a reference variable that refers to the current object.
+
+Following are the ways to use ‘this’ keyword in java :
+1. Using ‘this’ keyword to refer current class instance variables
+2. Using this() to invoke current class constructor
+3. Using ‘this’ keyword to return the current class instance
+4. Using ‘this’ keyword as method parameter
+5. Using ‘this’ keyword to invoke current class method 
+6. Using ‘this’ keyword as an argument in the constructor call
+
+
+
+
+Q)what is inheritance ?How do we implement it in Java?
+nheritance in Java is a mechanism in which one object acquires all the properties 
+and behaviors of a parent object. It is an important part of OOPs 
+(Object Oriented programming system). 
+The idea behind inheritance in Java is that you can create new classes that are 
+built upon existing classes.
+
+
+
+
+Q)List types of Inheritance
+Types of Inheritance in Java
+Single Inheritance.
+Multiple Inheritance.
+Multi-Level Inheritance.
+Hierarchical Inheritance.
+Hybrid Inheritance.
+
+
+
+Q)what is difference between this & super
+The this keyword points to a reference of the current class, 
+while the super keyword points to a reference of the parent class.
+ this can be used to access variables and methods of the current class, 
+ and super can be used to access variables and methods of the parent class 
+ from the subclass.
+
+
+
+
+Q)Is it mandatory for every super class to have default constructor
+You don't have to provide any constructors for your class, 
+but you must be careful when doing this. The compiler automatically provides
+ a no-argument, default constructor for any class without constructors. 
+This default constructor will call the no-argument constructor of the superclass.
+
+
+
+
+Q)Does class to super() must be first line ?if yes why
+what will happen if we dont call super() from subclass?
+
+Java enforces that the call to super (explicit or not) must be the 
+first statement in the constructor. This is to prevent the subclass part 
+of the object being initialized prior to the superclass part of the object 
+being initialized.
+
+
+
+Q)what is polymorphism .Explain its types
+Polymorphism is the ability to process objects differently on the basis of their class 
+and data types. 
+There are two types of polymorphism in Java: 
+compile time polymorphism and run time polymorphism in java. This java polymorphism 
+is also referred to as static polymorphisms and dynamic polymorphisms
+
+
+
+
+
+Q)what is difference between static binding & dynamic binding
+The static binding uses Type information for binding while Dynamic binding uses 
+Objects to resolve to bind. Overloaded methods are resolved (deciding which method 
+to be called when there are multiple methods with the same name) using 
+static binding while overridden methods use dynamic binding, i.e, at run time.
+https://www.tutorialspoint.com/difference-between-static-binding-and-dynamic-binding-in-java
+
+
+
+Q)what is method overloading?
+In Java, two or more methods may have the same name if they differ in parameters 
+(different number of parameters, different types of parameters, or both). 
+These methods are called overloaded methods and this feature is called method overloading.
+
+
+
+
+Q)what is difference between  method overloading & method overriding
+https://www.javatpoint.com/method-overloading-vs-method-overriding-in-java
+
+
+
+Q)what is covariant return type
+The covariant return type specifies that the return type may vary in the same direction 
+as the subclass.
+
+
+
+Q)Can We Overload main() method?
+Yes, we can overload the main method in Java, but When we execute the class 
+JVM starts execution with public static void main(String[] args) method.
+
+
+
+Q)Explain 
+ final variable -
+ If you make any variable as final, you cannot change the value of final variable
+ (It will be constant).
+ final method -
+ If you make any method as final, you cannot override it
+ https://www.javatpoint.com/final-keyword
+ final class -
+ If you make any class as final, you cannot extend it.
+ 
+ abstract method -
+Abstract method: can only be used in an abstract class, and it does not have a body.
+ The body is provided by the subclass (inherited from). 
+ abstract class -
+ Abstract class: is a restricted class that cannot be used to create objects 
+ (to access it, it must be inherited from another class). 
+ 
+ 
+ 
+Q)can abstract class have concrete methods
+Abstract classes are similar to interfaces. 
+You cannot instantiate them, and they may contain a mix of methods 
+declared with or without an implementation. However, with abstract classes, 
+you can declare fields that are not static and final, and define public, protected,
+ and private concrete methods.
+
+
+
+
+Q)what is interface?Explain its use in Java
+An interface is a reference type in Java. It is similar to class. 
+It is a collection of abstract methods. A class implements an interface, 
+thereby inheriting the abstract methods of the interface.
+ Along with abstract methods, an interface may also contain constants, default methods,
+ static methods, and nested types.
+
+
+
+
+Q)Can we instantiate an interface?
+Interfaces cannot be instantiated, but rather are implemented.
+ A class that implements an interface must implement all of the non-default methods
+ described in the interface, or be an abstract class.
+
+
+
+Q)Do interfaces have member variables?
+Yes, Interfaces CAN contain member variables. 
+But these variables have to be implicitly (without any keyword definition) final,
+ public and static. This means that within interfaces, one can only declare constants. 
+You cannot declare instance variables using interfaces.
+
+
+
+Q)What modifiers are allowed for methods in an Interface?
+
+Only public and abstract modifiers are allowed for methods in interfaces
+
+
+
+Q)What is a marker interface?
+It is an empty interface (no field or methods).
+ Examples of marker interface are Serializable, Cloneable and Remote interface.
+ All these interfaces are empty interfaces. 
+ 
+ 
+ 
+Q)Can there be an abstract class with no abstract methods in it?
+Yes
+An abstract class is a class that is declared abstract —it may or may not include 
+abstract methods. Abstract classes cannot be instantiated, but they can be subclassed. 
+When an abstract class is subclassed, the subclass usually provides implementations
+ for all of the abstract methods in its parent class.
+ 
+ 
+ 
+ 
+Q)When can an object reference be cast to an interface reference?
+An object reference be cast to an interface reference when the object implements the
+referenced interface.
+
+
+
+Q)what is difference between interface & Abstract class
+The Abstract class and Interface both are used to have abstraction. 
+An abstract class contains an abstract keyword on the declaration whereas 
+an Interface is a sketch that is used to implement a class.
+https://www.javatpoint.com/difference-between-abstract-class-and-interface
+
+
+
+Q)When should I use abstract classes and when should I use interfaces?
+Abstract classes should be used primarily for objects that are closely related, 
+whereas interfaces are best suited for providing common functionality to unrelated classes.
+ If you are designing small, concise bits of functionality, use interfaces. 
+ If you are designing large functional units, use an abstract class.
+
+
+
+
+Q)List final classes in Java
+In java, all the wrapper classes are final class like String, Integer, etc. 
+If we try to inherit a final class, then the compiler throws an error at compilation time.
+ We can't create a class as immutable without the final class
+ 
+ 
+ 
+Q)can we make a class abstract & final at the same time
+No
+If you declare a class abstract, to use it, you must extend it and if you declare 
+a class final you cannot extend it, since both contradict with each other you cannot 
+declare a class both abstract and final if you do so a compile time error will 
+be generated
+
+
+
+Q)List access specifiers in Java
+Java provides four types of access modifiers or visibility specifiers 
+i.e. default, public, private, and protected. 
+The default modifier does not have any keyword associated with it
+
+
+
+Q)what is the use of protected keyword
+The protected keyword is an access modifier used for attributes, methods and 
+constructors, making them accessible in the same package and subclasses
+
+
+
+Q)what is a package & its use
+
+
+Package in Java is a mechanism to encapsulate a group of classes, sub packages and 
+interfaces. 
+Packages are used for:
+
+Preventing naming conflicts. 
+Making searching/locating and usage of classes, interfaces, enumerations and annotations easier
+Providing controlled access: protected and default have package level access control. A protected member is accessible by classes in the same package and its subclasses. A default member (without any access specifier) is accessible by classes in the same package only.
+Packages can be considered as data encapsulation (or data-hiding).
+
+
+
+Q)Explain the following line  import java.awt.event.*;
+java.awt.event. Provides interfaces and classes for dealing with different types of events fired by AWT components. javax.accessibility. 
+Defines a contract between user-interface components and an assistive technology that provides access to those components.
+
+
+
+Q)what is the use of static imports
+The static import feature of Java 5 facilitate the java programmer to access any static member of a class directly. 
+There is no need to qualify it by the class name.
+
+
+Q)Do I need to import java.lang package any time? Why ?
+No, java. lang package is a default package in Java therefore, there is no need to import it explicitly. 
+i.e. without importing you can access the classes of this package.
+
+
+Q)Can I import same package/class twice? Will the JVM load the package twice at runtime?
+Yes, you can import a class twice in Java, it doesn't create any issues but, 
+irrespective of the number of times you import, JVM loads the class only once.
