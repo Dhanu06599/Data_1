@@ -418,7 +418,9 @@ Packages are used for:
 
 Preventing naming conflicts. 
 Making searching/locating and usage of classes, interfaces, enumerations and annotations easier
-Providing controlled access: protected and default have package level access control. A protected member is accessible by classes in the same package and its subclasses. A default member (without any access specifier) is accessible by classes in the same package only.
+Providing controlled access: protected and default have package level access control. 
+A protected member is accessible by classes in the same package and its subclasses. 
+A default member (without any access specifier) is accessible by classes in the same package only.
 Packages can be considered as data encapsulation (or data-hiding).
 
 
