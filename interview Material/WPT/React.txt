@@ -1,0 +1,117 @@
+REACT
+======
+react is an efficient , flexible ,open source frontend javascript library which is used for building user interfaces especially for single page applications
+
+JORDEN WALKE
+
+features
+========
+supports server side rendering 
+follows unidirectional data flow or databinding.
+uses virtual dom to increase efficiency instead of real dom, real dom manipulations are expensive
+uses reusable ui components to develop the view
+
+jsx : javascript xml
+
+element : plain object describing what u want to appear on the screen in terms of dom nodes or other components.
+
+component : can be declred in several different ways . it can be defined as a function . it can be a class with render() method. 
+1)function components(stateless component): simplest way to create component . those are pure js function that accepts props object as first parameter and return React elements
+             declaration : js functions and therefore can be declared using an arrow function whereas class declared using es6 class
+             handling props : any prop provided as an arg to a functional comp can be directly used inside HTML element     
+             handling state : use react hooks to handle state, cant use react hook inside class component
+             
+2)class component: ES6 CLASS TO DEFINE A COMPONent
+
+limitations of react:
+react is not a full blown framework as it is only a library
+might be difficult to understand react for beginners
+coding complex
+component of react are numerous will take time to fully grasp the benefits of all
+ 
+useState(): is a built in react hook that allows you for having state variables in functional components 
+
+keys in react?
+is a special string attribute that needs to be included when using lists of elements 
+
+
+virtual dom : 
+
+lightweight javascript representation of document object model.
+ to address the problem of ineffiecient updating ,the react dom introduced the concept of virtual dom.
+ virtual dom is a concept where a virtual representation of the real dom(it represents the entire ui and structured representation of html in webpage or application ) 
+  is kept inside memory and is synced with the real dom by a library such as reactdom.
+ dom manipulation is an integral part of any web application but it is quite slow when compared to other operations in js.
+  the main difference between real and virtual dom object is that any changes in the virtual dom object will not reflect on the screen directly.
+(vd is cheap to create because it doesnt write to the screen) , vd : it is nothing but an object created to replicate actual(real dom)...
+  consider a virtual dom object as the blueprint of the real dom object. updating the vd is much  faster than rd since we are just updating the blueprint of the real dom
+
+props in react:
+props are the data passed from a parent component into a child component
+props in react are the inputs to a component of react(passing custom data to react component)
+they can be single valued or objects having a set of values that will be passed to components of react
+during creation by using a naming convention that almost looks similar to HTML tag attributes
+ 
+props                                               state
+immutable                                          owned by its component
+bttr prfoemance                                    locally scoped 
+passed to child component                          mutable 
+every react component accepts a
+ single object argument called props
+(properties)                                       has setState() method to modify properties
+
+
+The disadvantage of using prop drilling is that the components that should otherwise be not aware of the data have access to the data.
+
+Any component which uses one of the following lifecycle methods is considered an error boundary.
+
+REACT HOOKS:
+React Hooks are the built-in functions that permit developers for using the state and lifecycle methods within React components.
+each lifecycle of a component is having 3 phases which include mount, unmount, and update
+Hooks will allow using these methods by developers for improving the reuse of code with higher flexibility.
+Using Hook, all features of React can be used without writing class components. now , using the useState hook, we can keep the state in a functional component.
+React Hooks must be called only at the top level. It is not allowed to call them inside the nested functions, loops, or conditions
+The useEffect React Hook is used for performing the side effects in functional components. 
+he useEffect React Hook will accept 2 arguments: useEffect(callback,[dependencies])
+The useEffect() will execute the callback only if there is a change in dependencies in between renderings.
+
+Why do React Hooks make use of refs?
+refs were only limited to class components but now it can also be accessible in function components 
+The refs are used for:
+
+Managing focus, media playback, or text selection.
+Integrating with DOM libraries by third-party.
+Triggering the imperative animations.
+
+CUSTOM HOOKS?
+A Custom Hook is a function in Javascript whose name begins with ‘use’ and which calls other hooks
+Custom Hooks will allow you for avoiding multiple layers of abstraction 
+The disadvantage of Custom Hooks is it cannot be used inside of the classes.
+
+React Router refers to the standard library used for routing in React. It permits us for building a single-page web application in React 
+with navigation without even refreshing the page when the user navigates. 
+It also allows to change the browser URL and will keep the user interface in sync with the URL
+
+
+
+
+
+
+
+
+
+
+                                                   
+
+
+
+
+
+
+
+
+
+
+
+
+

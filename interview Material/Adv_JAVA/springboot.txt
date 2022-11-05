@@ -1,0 +1,188 @@
+The advantages of Spring Boot are listed below:
+
+Easy to understand and develop spring applications.
+Spring Boot is nothing but an existing framework annotation configuration which makes it easier to understand and faster the process of development.
+Increases productivity and reduces development time.
+Minimum configuration.
+We don’t need to write any XML configuration, only a few annotations are required to do the configuration.
+
+the four key components of spring-boot:
+
+Spring Boot auto-configuration.
+Spring Boot CLI.
+Spring Boot starter POMs.
+Spring Boot Actuators
+
+Why Spring Boot over Spring?
+Starter POM.
+Version Management.
+Auto Configuration.
+Component Scanning.
+Embedded server.
+InMemory DB.
+Actuators
+
+
+What is the starter dependency of the Spring boot module?
+Spring boot provides numbers of starter dependency, here are the most commonly used -
+
+Data JPA starter.
+Test Starter.
+Security starter.
+Web starter.
+Mail starter.
+Thymeleaf starter
+
+How does Spring Boot works?
+Spring Boot automatically configures your application based on the dependencies you have added to the project by using annotation.
+
+@SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration, and @ComponentScan.
+Spring Boot enables the developer to use a single annotation instead of using multiple.
+Spring provided loosely coupled features.
+
+What is the purpose of using @ComponentScan in the class files?
+Spring Boot automatically scans all the components included in the project by using @ComponentScan annotation.
+
+How does a spring boot application get started?
+Just like any other Java program, a Spring Boot application must have a main method. 
+This method serves as an entry point, which invokes the SpringApplication#run method to start the application.
+ex: we need to import spring-boot-starter-web dependency for creating a web application = starter dependency
+
+Spring Initializer is a web application that helps you to create an initial spring boot project structure to build your code.
+It solves the problem of setting up a framework when you are starting a project from scratch.
+
+What is Spring Boot CLI and what are its benefits?
+Spring Boot CLI is a command-line interface that allows you to create a spring-based java application using Groovy.
+Example: You don’t need to create getter and setter method or access modifier, return statement. 
+If you use the JDBC template, it automatically loads for you.
+
+
+@EnableAutoConfiguration – to make Spring Boot look for auto-configuration beans on its classpath and automatically apply them.
+@SpringBootApplication – used to denote the main class of a Boot Application. 
+This annotation combines @Configuration, @EnableAutoConfiguration, and @ComponentScan annotations with their default attributes.
+
+Spring Boot dependency management is used to manage dependencies and configuration automatically:  What is Spring Boot dependency management?
+
+The default port of the tomcat server-id 8080. It can be changed by adding sever.port properties in the application.property file.
+
+Yes, we can override or replace the Embedded Tomcat server with any server by using the Starter dependency in the pom.xml file.
+
+Is it possible to change the port of the embedded Tomcat server in Spring Boot?
+Yes, it is possible. By using the server.port in the application.properties
+
+Can we disable the default web server in the Spring boot application?
+Yes, we can use application.properties to configure the web application type i.e spring.main.web-application-type=none.
+
+Explain @RestController annotation in Sprint boot?
+It is a combination of @Controller and @ResponseBody, used for creating a restful controller. 
+It converts the response to JSON or XML. It ensures that data returned by each method will be written straight into the response body.
+
+@Controller Map of the model object to view or template and make it human readable 
+but @RestController simply returns the object and object data is directly written in HTTP response as JSON or XML
+
+RequestMapping can be used with GET, POST, PUT, and many other request methods using the method attribute on the annotation. 
+Whereas getMapping is only an extension of RequestMapping which helps you to improve on clarity on request.
+
+
+An actuator is an additional feature of Spring that helps you to monitor and manage your application when you push it to production. 
+These actuators include auditing, health, CPU usage, HTTP hits, and metric gathering, and many more that are automatically applied to your application.
+To enable the spring actuator feature, we need to add the dependency of “spring-boot-starter-actuator” in pom.xml.
+
+What is an IOC container?
+IoC Container is a framework for implementing automatic dependency injection.
+It manages object creation and also injects dependencies into the class.
+
+Where do we define properties in the Spring Boot application?
+You can define both application and Spring boot-related properties into a file called application.properties. 
+You can create this file manually or use Spring Initializer to create this file. 
+You don’t need to do any special configuration to instruct Spring Boot to load this file, If it exists in classpath then spring boot automatically loads it 
+
+
+The process of injecting dependent bean objects into target bean objects is called dependency injection.
+
+Setter Injection: The IOC container will inject the dependent bean object into the target bean object by calling the setter method.
+Constructor Injection: The IOC container will inject the dependent bean object into the target bean object by calling the target bean constructor.
+Field Injection: The IOC container will inject the dependent bean object into the target bean object by Reflection API.
+
+Suppose class One needs the object of class Two to instantiate or operate a method, then class One is said to be dependent on class Two. 
+Now though it might appear okay to depend a module on the other but, in the real world, this could lead to a lot of problems, including system failure. 
+Hence such dependencies need to be avoided.
+IOC resolves such dependencies with Dependency Injection, which makes the code easier to test and reuse.
+
+Dependency Injection is the main functionality provided by Spring IOC(Inversion of Control).
+The Spring-Core module is responsible for injecting dependencies through either Constructor or Setter methods. 
+The design principle of Inversion of Control emphasizes keeping the Java classes independent of each other and the container frees them from object creation and maintenance.
+Dependency Injection in Spring also ensures loose-coupling between the classes.
+
+=======================================================================================================================================================================================
+spring                                                                                         spring boot
+                                                               Spring Boot is a spring-based framework that is mainly used to develop REST API’S.
+Spring is a lightweight application framework                  spring boot it is  autoconfiguration,
+it provides support to various frameworks                      Spring Boot helps to create a stand-alone application.      
+such as JSP, Hibernate, etc.                                   In Spring Boot there are default configurations that allow faster 
+                                                               bootstrapping.
+it is used to build applications                                  
+key feature of Spring is dependency injection 
+Spring framework helps to create a loosely coupled application.
+Spring framework does not provide support for the in-memory database
+such as H2. (opp in springboot)
+Spring framework requires too many lines of code  even for minimal tasks.
+(opp in springboot)
+In the Spring framework, you have to build configurations manually.
+In the Spring framework, XML Configuration is required.	                      No need for XML configuration in Spring Boot.
+Testing in Spring is difficult.	                                  Testing in Spring Boot is easier due to the reduced amount of source code.
+                                                                   Spring Boot helps in saving time, and reducing efforts by 
+                                                                            reducing the number of configurations.
+
+
+Can I use spring MVC with spring boot?
+Yes, you can use Spring MVC with Spring Boot. To create and run a Spring MVC web application in spring boot, 
+you need to add the spring-boot-starter dependency in your pom.xml file. 
+
+Spring Actuator is an interesting feature of Spring Boot. It allows you to see what is happening inside a running application.
+
+DispatcherServlet class  is the front controller of Spring MVC. 
+required to specify the DispatcherServlet class in the web.xml file.
+===========================================================================================================================================
+Spring mvc:
+
+Spring MVC is a Model, View, and Controller based framework used to build web applications.
+This framework requires a lot of configurations, such as DispatcherServlet configurations and View Resolver configurations
+Spring MVC helps to develop applications easily.
+A deployment descriptor is required for the Spring MVC framework
+The four components of Spring MVC are Model, View, Controller, and Front Controller (DispatcherServlet class).
+It is necessary to build the configuration manually if we are using Spring MVC.
+The Spring MVC framework requires more time for development.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

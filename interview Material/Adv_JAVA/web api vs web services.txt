@@ -1,0 +1,70 @@
+webservices v/s restfulweb api
+The basic difference between Web Services and Web APIs
+
+Web Service:
+
+1) It is a SOAP-based service and returns data as XML.
+2) It only supports the HTTP protocol.
+3) It is not open source but can be used by any client that understands XML.
+4) It requires a SOAP protocol to receive and send data over the network, so it is not a light-weight architecture.
+5) specific connectivity : java ki h
+
+Web API:
+
+1) A Web API is an HTTP based service and returns JSON or XML data by default.
+2) It supports the HTTP protocol.
+3) It can be hosted within an application or IIS.
+4) It is open source and it can be used by any client that understands JSON or XML,String multiple types of data we can send.
+5) It has light-weight architecture and good for devices which have limited bandwidth, like mobile devices.
+6)  @crossorigin : url path hota h isme jisse database ki connectivity hoti h
+7) IT supports serialization
+
+Web Services	                                                                         Web API
+Web services are a type of API, which must be accessed through a network connection.	APIs are application interfaces, implying that one application can communicate with another application in a standardized manner.
+Web service is used for REST, SOAP and XML-RPC for communication.	                 API is used for any style of communication.
+All Web services are APIs.	                                                        APIs are not web services.
+It doesn’t have lightweight design, needs a SOAP convention to send or receive data  
+over the system.                                                                         It has a light-weight architecture furthermore, useful for gadgets which have constrained transmission capacity like smart phones.
+It provides supports only for the HTTP protocol.	                                 It provides support for the HTTP/s protocol: URL Request/Response Headers, and so on.
+It is not open source, however, can be devoured by any customer that comprehends xml.	 It is an open source and also ships with .NET framework.
+Web service supports only XML.	                                                          API supports XML and JSON.
+Web Services can be hosted on IIS.	                                                  Web API can be hosted only on IIS and self.
+
+
+Advantages of Serialization
+1. To save/persist state of an object.
+2. To travel an object across a network.
+
+Serialization is a mechanism of converting the state of an object into a byte stream. 
+through network sending the data . 
+in the object form we can send or receive data. ex: REST API
+Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object.
+
+SOAP API
+
+                                                                                                        REST API
+
+Relies on SOAP (Simple Object Access Protocol)	                                       Relies on REST (Representational State Transfer) architecture using HTTP.
+Transports data in standard XML format.	                                               Generally transports data in JSON. It is based on URI. Because REST follows stateless model, REST does not enforces message format as XML or JSON etc.
+Because it is XML based and relies on SOAP, it works with WSDL	                       It works with GET, POST, PUT, DELETE
+Works over HTTP, HTTPS, SMTP, XMPP	                                               Works over HTTP and HTTPS
+Highly structured/typed	                                                               Less structured -> less bulky data
+Designed with large enterprise applications in mind	                               Designed with mobile devices in mind
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
