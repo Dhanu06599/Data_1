@@ -1,0 +1,295 @@
+
+What is spring 
+The Spring Framework is an open-source framework for building enterprise Java applications. Spring 
+aims to simplify the complex and cumbersome enterprise Java application development process by offering 
+a framework that includes technologies such as: Aspect-oriented programming (AOP) Dependency injection (DI)
+
+Spring is a lightweight framework. It can be thought of as a framework of frameworks because it provides 
+support to various frameworks such as Struts, Hibernate, Tapestry, EJB, JSF, etc. The framework, in broader 
+sense, can be defined as a structure where we find solution of the various technical problems.
+====================================================================================================================
+What is di
+Dependency Injection is a fundamental aspect of the Spring framework, through which the Spring container “injects” 
+objects into other objects or “dependencies”. Simply put, this allows for loose coupling of components and moves 
+the responsibility of managing components onto the container.
+====================================================================================================================
+What is ioc
+Spring IoC Container is the core of Spring Framework. It creates the objects, configures and assembles their 
+dependencies, manages their entire life cycle. The Container uses Dependency Injection(DI) to manage the 
+components that make up the application.
+====================================================================================================================
+Features of spring
+Spring Framework can be employed on all architectural layers used in the development of web applications;
+
+Uses the very lightweight POJO model when writing classes;
+
+Allows you to freely link modules and easily test them;
+
+Supports declarative programming;
+Eliminates the need to independently create factory and singleton classes;
+
+Supports various configuration methods;
+
+Provides middleware-level service.
+====================================================================================================================
+what is lightweight application
+
+
+
+
+
+What is ORM in Hibernate?
+ORM stands for Object-Relational Mapping (ORM) is a programming technique for converting data 
+between relational databases and object oriented programming languages such as Java, C#, etc.
+====================================================================================================================
+What are the advantages of Hibernate over JDBC?
+1. Hibernate code will work well for all databases, for ex: Oracle,MySQL, etc. where as JDBC is database specific.
+
+2. No knowledge of SQL is needed because Hibernate is a set of objects and a table is treated as an object, where 
+as to work with JDBC, one need to know SQL.
+
+3. Query tuning is not required in Hibernate. The query tuning is automatic in hibernate by using criteria queries, 
+and the result of performance is at its best. Where as in JDBC the query tuning is to be done by the database authors.
+
+4. With the support of cache of hibernate, the data can be placed in the cache for better performance. Where as in 
+JDBC the java cache is to be implemented.
+----------------------------------------------------------------------------------------------
+1. Developer has to write code in JDBC to map an object model's data representation to a relational data model 
+and its corresponding database schema.
+
+2. Hibernate itself takes care of this mapping using XML files so developer does not need to write code for this.
+JDBC supports only native Structured Query Language (SQL).
+Hibernate provides Hibernate Query Language (HQL) which is similar to SQL syntax and supports polymorphic queries too. 
+It also supports native SQL statements.
+
+3. The mapping of Java objects with database tables has to be taken care of in JDBC. Hibernate provides transparent 
+persistence and therefore there is no need to map database tables tuples to application objects during interaction 
+with RDBMS.
+
+4. With JDBC, caching needs to be manually maintained. Hibernate cache is set to application work space. Relational 
+tuples are moved to this cache as a result of query. It improves performance during multiple writes for the same data.
+
+5. In JDBC there is no check that always every user has updated data. Hibernate enables definition of version type 
+field to application, due to which Hibernate updates version field of database table every time relational tuple is 
+updated in form of Java class object to that table.
+====================================================================================================================
+What are some of the important interfaces of Hibernate framework?
+Session interface: This is the primary interface used by hibernate applications. The instance of this interface 
+are lightweight and are inexpensive to create and destroy. Hibernate sessions are not thread-safe.
+
+Session Factory interface: This is a factory that delivers the session objects to hibernate applications.Generally, 
+there will be a single SessionFactory for the whole application and it will be shared among the application threads.
+
+Configuration interface: This interface is used to configure and bootstrap hibernate. The instance of this interface 
+is used by the application in order to specify the location of hibernate-specific mapping documents.
+
+Transaction interface: This is an optional interface but the above three interfaces are mandatory in each and 
+every application. This interface abstracts the code from any kind of transaction implementation such as a JDBC 
+transaction.
+
+Query and criteria interface: This interface allows the user to perform queries and also control the flow of the 
+query execution.
+====================================================================================================================
+What is a Session in Hibernate?
+A Session is used to get a physical connection with a database. The Session object is lightweight and designed 
+to be instantiated each time an interaction is needed with the database. Persistent objects are saved and 
+retrieved through a Session object.
+====================================================================================================================
+What is a SessionFactory?
+The SessionFactory is a thread safe object and used by all the threads of an application. The SessionFactory 
+is a heavyweight object; it is usually created during application start up and kept for later use. You would 
+need one SessionFactory object per database using a separate configuration file.
+====================================================================================================================
+Can you explain what is lazy loading in hibernate?
+Hibernate now can "lazy-load" the children, which means that it does not actually load all the children when 
+loading the parent. Instead, it loads them when requested to do so. You can either request this explicitly or, 
+and this is far more common, hibernate will load them automatically when you try to access a child.
+====================================================================================================================
+Mention some important annotations used for Hibernate mapping?
+
+====================================================================================================================
+What is an API?
+An application programming interface is a way for two or more computer programs to communicate with 
+each other. It is a type of software interface, offering a service to other pieces of software. 
+A document or standard that describes how to build or use such a connection or interface is called 
+an API specification.
+====================================================================================================================
+What is a framework?
+A framework in programming is a tool that provides ready-made components or solutions that are customized 
+in order to speed up development. A framework may include a library, but is defined by the principle of 
+inversion of control (IoC). With traditional programming, the custom code calls into the library to access 
+reusable code. With IoC, the framework calls on custom pieces of code when necessary.
+====================================================================================================================
+What is JPA?
+JPA stands for Java Persistence API (Application Programming Interface). It was initially released on 11 May 2006. 
+It is a Java specification that gives some functionality and standard to ORM tools. It is used to examine, control, 
+and persist data between Java objects and relational databases. It is observed as a standard technique for Object 
+Relational Mapping. 
+
+It is considered as a link between an object-oriented model and a relational database system. As it is a 
+specification of Java, JPA does not conduct any functioning by itself. Therefore, it needs implementation. 
+Hence, for data persistence ORM tools like Hibernate implements JPA specifications. For data persistence, 
+the javax.persistence package contains the JPA classes and interfaces. 
+====================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q. What is a servlet?
+ A servlet is a small Java program that runs within a Web server. Servlets receive and respond to requests
+ from Web clients, usually across HTTP, the HyperText Transfer Protocol. Servlets can also access a library 
+ of HTTP-specific calls and receive all the benefits of the mature Java language, including portability, 
+ performance, reusability, and crash protection. Servlets are often used to provide rich interaction 
+ functionality within the browser for users (clicking link, form submission, etc.)
+==================================================================================================================== 
+Q. Explain Servlets Lifecycle?
+A servlet life cycle can be defined as the entire process from its creation till the destruction. The 
+following are the paths followed by a servlet. The servlet is initialized by calling the init() method. 
+The servlet calls service() method to process a client's request.
+====================================================================================================================
+Q. What is a servlet container?
+The servlet container provides the servlet with easy access to properties of the HTTP request, such as 
+its headers and parameters. When a servlet is called, such as when it is specified by URL, the Web server 
+passes the HTTP request to the servlet container. The container, in turn, passes the request to the servlet.
+
+the user/client can only request static webpage from the server. this is not good enough, if the user wants to
+read the web page based on his input. the basic idea of servlet container is using java to dynamically generate 
+the web page on the server side. so servlet container is essentially a part of a web server that interacts with 
+the servlets.
+====================================================================================================================
+Q. What is ServletContext Interface?
+Defines a set of methods that a servlet uses to communicate with its servlet container, for example, to get 
+the MIME(Multipurpose internet Mail Extension) type of a file, dispatch requests, or write to a log file.There 
+is one context per "web application" per Java Virtual Machine.
+====================================================================================================================
+Q. How does the servlet container manage the servlet life cycle, when and what methods are called?
+The entire life cycle of a Servlet is managed by the Servlet container which uses the javax.servlet.Servlet interface 
+to understand the Servlet object and manage it. So, before creating a Servlet object, let’s first understand the 
+life cycle of the Servlet object which is actually understanding how the Servlet container manages the Servlet object.
+
+Stages of the Servlet Life Cycle: The Servlet life cycle mainly goes through four stages,
+
+Loading a Servlet.
+Initializing the Servlet.
+Request handling.
+Destroying the Servlet.
+
+https://www.geeksforgeeks.org/life-cycle-of-a-servlet/
+====================================================================================================================
+Q. What actions do you need to do when creating servlets?
+The steps are as follows:
+1.Create a directory structure.
+2.Create a Servlet.
+3.Compile the Servlet.
+4.Create a deployment descriptor.
+5.Start the server and deploy the project.
+6.Access the servlet.
+====================================================================================================================
+Q. How to call another servlet from one servlet?
+You can call this servlet programmatically from another servlet in one of two ways. To include another servlet's 
+output, use the include() method from the RequestDispatcher interface. This method calls a servlet by its URI and 
+waits for it to return before continuing to process the interaction.
+====================================================================================================================
+Q. What is Request Dispatcher?
+public interface RequestDispatcher. Defines an object that receives requests from the client and sends them 
+to any resource (such as a servlet, HTML file, or JSP file) on the server.
+====================================================================================================================
+Q. What are the differences between forward() and sendRedirect() methods?
+https://www.javatpoint.com/sendRedirect()-method
+====================================================================================================================
+
+What is the JDBC?
+
+Java™ database connectivity (JDBC) is the JavaSoft specification of a standard application programming 
+interface (API) that allows Java programs to access database management systems. The JDBC API consists of a 
+set of interfaces and classes written in the Java programming language.
+====================================================================================================================
+Explain the JDBC Architecture?
+
+Java Database Connectivity (JDBC) architecture is an API specifying interfaces for accessing relational databases. 
+JDBC helps to connect to a database, send queries and updates to the database, and retrieve and process the 
+results obtained from the database for queries
+====================================================================================================================
+What are the new features available in JDBC 4.0?
+
+JDBC 4.0 added new overloads of the streaming methods in CallableStatement, PreparedStatement, and ResultSet. 
+These are the setXXX and updateXXX methods which take java. io. InputStream and java.
+====================================================================================================================
+What are the advantages of using PreparedStatement in Java?
+
+-Here are a few advantages of using PreparedStatement in Java:
+-PreparedStatement allows you to write a dynamic and parametric query. ...
+-PreparedStatement is faster than Statement in Java. ...
+-PreparedStatement prevents SQL Injection attacks in Java.
+====================================================================================================================
+What is ResultSet?
+
+The SQL statements that read data from a database query, return the data in a result set. The SELECT statement 
+is the standard way to select rows from a database and view them in a result set. The java.sql.ResultSet 
+interface represents the result set of a database query.
+
+A ResultSet object maintains a cursor that points to the current row in the result set. The term "result set" 
+refers to the row and column data contained in a ResultSet object.
+-------------------------------------------------------------------------------
+A ResultSet object is a table of data representing a database result set, which is usually generated by executing 
+a statement that queries the database. For example, the CoffeeTables. viewTable method creates a ResultSet , rs , 
+when it executes the query through the Statement object, stmt .
+====================================================================================================================
+What are types of ResultSet?
+There are two types of result sets namely, forward only and, bidirectional.
+
+Forward only ResultSet: The ResultSet object whose cursor moves only in one direction is known as forward 
+only ResultSet. By default, JDBC result sets are forward-only result sets.
+====================================================================================================================
+What is the difference between executing, executeQuery, executeUpdate in JDBC?
+====================================================================================================================
+
+What is JSP?What are the different Life-Cycle methods? 
+Mention some important JSP Action Tags.
+Why are the request.getRequestDispatcher() and context.getRequestDispatcher() used?
+What are the various Implicit Objects used in JSP 
+How can we stop errors on Display in a JSP Page?
+
+Explain Client-Side and Server-Side Validation.Q. What is a servlet?
+Q. Explain Servlets Lifecycle?
+Q. What is a servlet container?
+Q. What is ServletContext Interface?
+Q. How does the servlet container manage the servlet life cycle, when and what methods are called?
+Q. What actions do you need to do when creating servlets?
+Q. How to call another servlet from one servlet?
+Q. What is Request Dispatcher?
+Q. What are the differences between forward() and sendRedirect() methods?
+
+What is the JDBC?
+Explain the JDBC Architecture?
+What are the new features available in JDBC 4.0?
+What are the advantages of using PreparedStatement in Java?
+What is ResultSet?
+What are types of ResultSet?
+What is the difference between executing, executeQuery, executeUpdate in JDBC?
+
+What is JSP?What are the different Life-Cycle methods? 
+Mention some important JSP Action Tags.
+Why are the request.getRequestDispatcher() and context.getRequestDispatcher() used?
+What are the various Implicit Objects used in JSP 
+How can we stop errors on Display in a JSP Page?
+
+Explain Client-Side and Server-Side Validation.
